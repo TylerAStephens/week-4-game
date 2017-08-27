@@ -13,18 +13,35 @@ console.log(myRandom);
 var targetNumber = myRandom;
 $("#number-to-guess").text(targetNumber);
 
-// add random values to each button
-var numberOptions = [10, 5, 3, 7];
+// add random values to each button//////////
+var jNumberOne = randomJNumber(1,12);
+function randomJNumber(myMin, myMax) {
+    return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+}
+var jNumberTwo = randomJNumber(1,12);
+function randomJNumber(myMin, myMax) {
+    return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+}
+var jNumberThree = randomJNumber(1,12);
+function randomJNumber(myMin, myMax) {
+    return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+}
+var jNumberFour = randomJNumber(1,12);
+function randomJNumber(myMin, myMax) {
+    return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+}
+console.log(jNumberOne);
+console.log(jNumberTwo);
+console.log(jNumberThree);
+console.log(jNumberFour);
+////////////////////////////////////
 
-// Next we create a for loop to create crystals for every numberOption.
-  for (var i = 0; i < numberOptions.length; i++) {
-      console.log(numberOptions);
-  }
+    
 // add 4 buttons
 // if clicked on add values to a player score
 // Button 1
 $(".crystal1-button").on("click", function() {
-    counter += 10;
+    counter += jNumberOne;
     alert("New Score " + counter + " times!");
     if (counter === targetNumber) {
         alert("You win!");
@@ -35,7 +52,7 @@ $(".crystal1-button").on("click", function() {
 });
 // Button 2
  $(".crystal2-button").on("click", function() {
-    counter += 10;
+    counter += jNumberTwo;
     alert("New Score " + counter + " times!");
     if (counter === targetNumber) {
         alert("You win!");
@@ -46,7 +63,7 @@ $(".crystal1-button").on("click", function() {
 });
 // Button 3
 $(".crystal3-button").on("click", function() {
-    counter += 10;
+    counter += jNumberThree;
     alert("New Score " + counter + " times!");
     if (counter === targetNumber) {
         alert("You win!");
@@ -57,17 +74,19 @@ $(".crystal3-button").on("click", function() {
 });
 // Button 4
 $(".crystal4-button").on("click", function() {
-    counter += 10;
+    counter += jNumberFour;
 alert("New Score " + counter + " times!");
 if (counter === targetNumber) {
     alert("You win!");
   }
 else if (counter >= targetNumber) {
     alert("You lose!!");
-  } 
+}
+
+
 });
 
-
+});
 
 
 
@@ -76,4 +95,3 @@ else if (counter >= targetNumber) {
 // reset random numener but keep score log
 
 // add reset button to reset all scores
-    });
