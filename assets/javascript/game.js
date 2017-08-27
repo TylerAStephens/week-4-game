@@ -3,6 +3,7 @@ $(document).ready(function() {
 // generate random number
 var myRandom = randomRange(19,120);
 var counter = 0;
+
 function randomRange(myMin, myMax) {
     return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
    
@@ -40,6 +41,7 @@ console.log(jNumberFour);
 // add 4 buttons
 // if clicked on add values to a player score
 // Button 1
+
 $(".crystal1-button").on("click", function() {
     counter += jNumberOne;
     alert("New Score " + counter + " times!");
@@ -48,7 +50,9 @@ $(".crystal1-button").on("click", function() {
       }
     else if (counter >= targetNumber) {
         alert("You lose!!");
-      }      
+      }     
+      $("#total-score").text(counter);
+      console.log(counter); 
 });
 // Button 2
  $(".crystal2-button").on("click", function() {
@@ -59,7 +63,9 @@ $(".crystal1-button").on("click", function() {
       }
     else if (counter >= targetNumber) {
         alert("You lose!!");
-      }         
+      }   
+      $("#total-score").text(counter);
+      console.log(counter);       
 });
 // Button 3
 $(".crystal3-button").on("click", function() {
@@ -70,7 +76,9 @@ $(".crystal3-button").on("click", function() {
       }
     else if (counter >= targetNumber) {
         alert("You lose!!");
-      }      
+      }  
+      $("#total-score").text(counter);
+      console.log(counter);     
 });
 // Button 4
 $(".crystal4-button").on("click", function() {
@@ -82,7 +90,8 @@ if (counter === targetNumber) {
 else if (counter >= targetNumber) {
     alert("You lose!!");
 }
-
+$("#total-score").text(counter);
+console.log(counter);
 
 });
 
