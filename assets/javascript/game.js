@@ -3,7 +3,8 @@ $(document).ready(function() {
 // generate random number
 var myRandom = randomRange(19,120);
 var counter = 0;
-
+var winCounter = 0;
+var lossCounter = 0;
 function randomRange(myMin, myMax) {
     return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
    
@@ -46,10 +47,14 @@ $(".crystal1-button").on("click", function() {
     counter += jNumberOne;
     alert("New Score " + counter + " times!");
     if (counter === targetNumber) {
+        winCounter++;
+        document.getElementById("win-counter").innerHTML = winCounter;
         alert("You win!");
       }
     else if (counter >= targetNumber) {
         alert("You lose!!");
+        lossCounter++;
+        document.getElementById("loss-counter").innerHTML = lossCounter;
       }     
       $("#total-score").text(counter);
       console.log(counter); 
@@ -59,10 +64,14 @@ $(".crystal1-button").on("click", function() {
     counter += jNumberTwo;
     alert("New Score " + counter + " times!");
     if (counter === targetNumber) {
+        winCounter++;
+        document.getElementById("win-counter").innerHTML = winCounter;
         alert("You win!");
       }
     else if (counter >= targetNumber) {
         alert("You lose!!");
+        lossCounter++;
+        document.getElementById("loss-counter").innerHTML = lossCounter;
       }   
       $("#total-score").text(counter);
       console.log(counter);       
@@ -72,10 +81,14 @@ $(".crystal3-button").on("click", function() {
     counter += jNumberThree;
     alert("New Score " + counter + " times!");
     if (counter === targetNumber) {
+        winCounter++;
+        document.getElementById("win-counter").innerHTML = winCounter;
         alert("You win!");
       }
     else if (counter >= targetNumber) {
         alert("You lose!!");
+        lossCounter++;
+        document.getElementById("loss-counter").innerHTML = lossCounter;
       }  
       $("#total-score").text(counter);
       console.log(counter);     
@@ -85,10 +98,14 @@ $(".crystal4-button").on("click", function() {
     counter += jNumberFour;
 alert("New Score " + counter + " times!");
 if (counter === targetNumber) {
+    winCounter++;
+    document.getElementById("win-counter").innerHTML = winCounter;
     alert("You win!");
   }
 else if (counter >= targetNumber) {
     alert("You lose!!");
+    lossCounter++;
+    document.getElementById("loss-counter").innerHTML = lossCounter;
 }
 $("#total-score").text(counter);
 console.log(counter);
