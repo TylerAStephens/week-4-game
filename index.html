@@ -12,32 +12,62 @@
     <script src="assets/javascript/game.js"></script>
      <!-- Added a link to Bootstrap-->
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-   
+    <!-- Added link to css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <title>CrystalsCollector Game</title>
 </head>
 <body>
-    <h1>CrystalsCollector!</h1>
+   
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-3 text-center">CrystalsCollector!</h1>
+          <p class="lead"> You will be given a random number at the start of the game. </p>
+          <p class="lead">There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+            <p class="lead">You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+            <p class="lead">The value of each crystal is hidden from you until you click on it. </p>
+             <p class="lead">Each time when the game starts, the game will change the values of each crystal.</p>
+        </div>
+      </div>
+
+      <div class="row">
     <div class="panel panel-default">
         <div class="panel-body">
           <strong>Wins: </strong> <span id="win-counter">0</span>
         </div>
       </div>
+      </div>
 
+      <div class="row">
       <div class="panel panel-default">
         <div class="panel-body">
           <strong>Losses: </strong> <span id="loss-counter">0</span>
         </div>
       </div>
-   
-      <h1>Number to Guess: <span id="number-to-guess"></span></h1>
+      </div>
+
+      <div class="row">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <strong> Number to Guess: </strong><span id="number-to-guess"></span>
+              </div>
+            </div>
+            </div>
+     
    
       <div class="panel-body">
-    <button id="button-1" class="btn btn-default crystal1-button"><img src="assets/images/5-Star_Crystal.png" alt="jewel1" width="150" height="150"></button>
-    <button id="button-2" class="btn btn-default crystal2-button"><img src="assets/images/crystal_multi_4thofjuly.png" alt="jewel2" width="150" height="150"></button>
-    <button id="button-3" class="btn btn-default crystal3-button"><img src="assets/images/Crystal_multi_tech.png" alt="jewel3" width="150" height="150"></button>
-    <button id="button-4" class="btn btn-default crystal4-button"><img src="assets/images/crystal_superiorironman.png" alt="jewel4" width="150" height="150"></button>
+    <button id="button-1" class="btn btn-default crystal1-button"><img src="assets/images/5-Star_Crystal.png" alt="jewel1" width="100" height="100"></button>
+    <button id="button-2" class="btn btn-default crystal2-button"><img src="assets/images/crystal_multi_4thofjuly.png" alt="jewel2" width="100" height="100"></button>
+    <button id="button-3" class="btn btn-default crystal3-button"><img src="assets/images/Crystal_multi_tech.png" alt="jewel3" width="100" height="100"></button>
+    <button id="button-4" class="btn btn-default crystal4-button"><img src="assets/images/crystal_superiorironman.png" alt="jewel4" width="100" height="100"></button>
     </div>
 
-    <h1>Total Score: <span id="total-score"></span></h1>
+    
+    <div class="row">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <strong>Total Score: </strong><span id="total-score">0</span>
+              </div>
+            </div>
+            </div>
 </body>
 </html>
